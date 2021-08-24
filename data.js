@@ -5,7 +5,7 @@ export const candies = [
         img: './assets/GummiBear.jpg',
         price: 1,
         quantity: 20,
-        wieght: .5
+        weight: .5
     },
 
     { 
@@ -14,7 +14,7 @@ export const candies = [
         img: './assets/Reeses.jpg',
         price: 2,
         quantity: 2,
-        wieght: .5
+        weight: .5
     },
 
     { 
@@ -23,7 +23,7 @@ export const candies = [
         img: './assets/SourPatchKids.jpg',
         price: 3,
         quantity: 15,
-        wieght: .5
+        weight: .5
     },
 
     { 
@@ -32,7 +32,7 @@ export const candies = [
         img: './assets/AlmondJoy.jpeg',
         price: 5,
         quantity: 1,
-        wieght: .5
+        weight: .5
     },
 
     { 
@@ -41,7 +41,7 @@ export const candies = [
         img: './assets/JollyRanchers.png',
         price: 2,
         quantity: 10,
-        wieght: .5
+        weight: .5
     },
 
     { 
@@ -50,6 +50,6 @@ export const candies = [
         img: './assets/Lollipop.jpg',
         price: .5,
         quantity: 1,
-        wieght: 1
+        weight: 1
     }
 ];
