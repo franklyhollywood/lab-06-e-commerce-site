@@ -50,6 +50,6 @@ export const candies = [
         img: './assets/Lollipop.jpg',
         price: .5,
         quantity: 1,
-        weight: 1
+        weight: 10
     }
 ];

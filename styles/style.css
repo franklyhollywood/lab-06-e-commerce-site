@@ -112,9 +112,14 @@ footer {
 .candy {
 	border: solid 1px black;
 	border-radius: 5px;
-	text-align: right;
+	text-align: center;
 }
 
 .candy img {
-	width: 125px;
+	width: 150px;
+	border-radius: 5px;
+}
+
+.addButton {
+	margin-bottom: 10px;
 }

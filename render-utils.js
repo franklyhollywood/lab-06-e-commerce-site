@@ -20,7 +20,7 @@ export function renderCandy(candy) {
     img.src = candy.img;
     priceP.textContent = `Price $${candy.price}`;
     quantityP.textContent = `quantity: ${candy.quantity}`;
-    weightP.textContent = `Weight ${candy.weight}`;
+    weightP.textContent = `Weight ${candy.weight} oz`;
     addButton.value = candy.id;
     addButton.textContent = 'Add';
 
