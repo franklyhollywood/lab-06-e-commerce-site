@@ -20,20 +20,27 @@
     </header>
     <main>
         <h1>Shopping Cart</h1>
-        <table>
+        <table id="tableId">
             <tr>
               <th>Candy</th>
               <th>Price</th>
               <th>Quantity</th>
               <th>Total</th>
             </tr>
-            <tr>
-              <td>Reeses</td>
+            <!-- <tr>
+              <td >Reeses</td>
               <td>2.00</td>
               <td>500</td>
               <td>1000.00</td>
-            </tr>
-          
+            </tr> -->
+            <tfoot>
+            <tr>
+                <td ></td>
+                <td></td>
+                <td></td>
+                <td id ="grandTotalId"></td>
+              </tr> 
+            </tfoot>
           </table>
           <button id = "purchaseButton">Purchase</button>
        
@@ -42,7 +49,7 @@
         <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
     </footer>
 
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./cart.js"></script>
 </body>
 
 </html>

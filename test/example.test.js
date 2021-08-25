@@ -3,11 +3,12 @@
 
 import { findById } from '../findById.js';
 import { candies } from '../data.js';
-
+import { calcItemTotal } from '../cart/render-table-row.js';
+import { renderTableRow } from '../cart/render-table-row.js'
 
 const test = QUnit.test;
 
-test('Should take in an item from the cart and render a <tr>. ', (expect) => {
+test('Return one specified item from the data.js', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = { 
@@ -21,11 +22,42 @@ test('Should take in an item from the cart and render a <tr>. ', (expect) => {
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = findById( candies, 2);
+    const actual = findById(candies, 2);
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual, expected);
 });
 
+test('Should take quantity and price and give a total.', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = 1000.00
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = calcItemTotal(2, 500);
 
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('Should take in _ and return a TR.', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = '<tr><td>Peanut Butter Cups</td><td>2.00</td><td>500</td><td>1000.00</td></tr>';
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = renderTableRow(
+        { 
+            id: 2, 
+            quantity: 500
+        }
+    );
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
+});

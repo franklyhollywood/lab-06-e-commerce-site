@@ -6,6 +6,11 @@ export const cartArray = [
     },
 
     {
+        id: 2,
+        quantity: 500
+    },
+
+    {
         id: 3,
         quantity: 2
     },
