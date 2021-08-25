@@ -9,13 +9,15 @@
 
 
 import { candies } from '../data.js';
+//will not need this cartArray, and will need to import
+//will need to import getcart from utils...
 import { cartArray } from './cart-data.js';
 import { renderTableRow } from './render-table-row.js';
 import { grandTotal } from './render-table-row.js'; 
 
 const cartTable = document.getElementById('tableId');
 const grandTotalEl = document.getElementById('grandTotalId');
-
+//const cartarray - from getcart function from today.
 
 for (let cartObject of cartArray) {
     const tr = renderTableRow(cartObject);
