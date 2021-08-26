@@ -147,3 +147,7 @@ td:nth-child(4) {
 #total {
 	background-color: white;
 }
+
+#shoppingCartPage {
+	text-align: center;
+}

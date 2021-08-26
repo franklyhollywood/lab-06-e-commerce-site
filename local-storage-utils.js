@@ -40,7 +40,7 @@ export function addToCart(productId) {
         productInCart.quantity++;
 //if it is not in the cart, add it:
     } else {
-        const newObject = { id:productId, quantity:1}
+        const newObject = { id:productId, quantity:1 };
         //add new item to the array:
         cart.push(newObject);
     }
@@ -49,6 +49,12 @@ export function addToCart(productId) {
 }
 
 export function clearCart(){
-
-
+    // first get cart using getcart function above:
+    const cart = getCart();
+    //alert the contents of the cart:
+    alert(cart);
+    //get rid of the cart in local storage:
+    localStorage.removeItem(CART);
+    //send user back to the homepage:
+    window.location = '../index.html';
 }
