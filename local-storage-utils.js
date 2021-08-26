@@ -8,7 +8,6 @@ export function getCart() {
     const initialCart = localStorage.getItem(CART);
     // if nothing is there, return an empty array:
     if (!initialCart) {
-        
         return [];
     }
     //if there is a cart, parse it:
@@ -17,8 +16,11 @@ export function getCart() {
     return initialCartParsed;
 }
 
+// Make cart stringified so that the local storage can use it:
 export function setCart(cartArray) {
+    //stringify cart array:
     const stringifiedCart = JSON.stringify(cartArray);
+    //Put cart into local storage:
     localStorage.setItem(CART, stringifiedCart);
 }
 
