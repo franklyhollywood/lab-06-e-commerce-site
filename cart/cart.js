@@ -9,12 +9,12 @@
 
 
 import { candies } from '../data.js';
-//will not need this cartArray, and will need to import
-//will need to import getcart from utils...
+//will need to import getcart from utils/ won't need fake data from cartArray
 //import { cartArray } from './cart-data.js';
 import { clearCart, getCart } from '../local-storage-utils.js';
-import { renderTableRow } from './render-table-row.js';
-import { grandTotal } from './render-table-row.js'; 
+import { renderTableRow, grandTotal } from './render-table-row.js';
+//added this line to above: 
+//import { grandTotal } from './render-table-row.js'; 
 
 const purchaseButton = document.getElementById('purchaseButton');
 const cartTable = document.getElementById('tableId');
@@ -22,13 +22,12 @@ const grandTotalEl = document.getElementById('grandTotalId');
 //const cartarray - from getcart function from today.
 const cartArray = getCart();
 
+//purchase button on cart page displays what's in cart in an alert
+// then clear't the cart and redirects the user based on clearCart function.
 purchaseButton.addEventListener('click', (event) => {
     alert(JSON.stringify(getCart()));
     clearCart();    
    
-
-
-
 });
 
 for (let cartObject of cartArray) {
