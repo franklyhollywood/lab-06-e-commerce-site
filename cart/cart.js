@@ -22,6 +22,15 @@ const grandTotalEl = document.getElementById('grandTotalId');
 //const cartarray - from getcart function from today.
 const cartArray = getCart();
 
+purchaseButton.addEventListener('click', (event) => {
+    alert(JSON.stringify(getCart()));
+    localStorage.removeItem('CART');
+    window.location.replace('../index.html');
+
+
+
+})
+
 for (let cartObject of cartArray) {
     const tr = renderTableRow(cartObject);
     cartTable.append(tr);
