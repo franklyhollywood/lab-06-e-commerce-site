@@ -1,20 +1,30 @@
 import { findById } from './findById.js';
+import { candies } from './data.js';
 
-const CART = 'CART';
+//so we don't misspell or forget the quotes:
+export const CART = 'CART';
+export const PRODUCTS = 'PRODUCTS';
 
+
+
+
+// First we want to check local storage and get any items in the cart:
 export function getCart() {
-    
-    // See if anything is in the cart already:
+
+    // See if anything is in the cart already: if so, we will get it:
     const initialCart = localStorage.getItem(CART);
     // if nothing is there, return an empty array:
     if (!initialCart) {
         return [];
     }
-    //if there is a cart, parse it:
+    //if there is a cart, parse it so that we can read it as an array/object:
     const initialCartParsed = JSON.parse(initialCart);
-    //return initialCartParsed
+    //return initialCartParsed.
     return initialCartParsed;
 }
+
+
+
 
 // Make cart stringified so that the local storage can use it:
 export function setCart(cartArray) {
@@ -22,6 +32,39 @@ export function setCart(cartArray) {
     const stringifiedCart = JSON.stringify(cartArray);
     //Put cart into local storage:
     localStorage.setItem(CART, stringifiedCart);
+}
+
+
+
+//this function gets any items in the cart:
+export function getProducts() {
+    //do we have any products waiting in the cart already?
+    //here we are getting anything in localStorage:
+    const stringifiedProducts = localStorage.getItem(PRODUCTS);
+    //If not, than return the 
+    if (!stringifiedProducts) {
+// candies as usual.
+        return candies;
+    }// parse the stringigied cart so that it is readable as an array/object:
+    const finalProducts = JSON.parse(stringifiedProducts);
+    // return the final product
+    return finalProducts;
+
+}
+
+//Stringify the admin page inputs and put into local storage:
+export function setProduct(productsArray) {
+    //stringify cart array:
+    const stringifiedCart = JSON.stringify(productsArray);
+    //Put cart into local storage:
+    localStorage.setItem(CART, stringifiedCart);
+}
+
+//this function adds 
+export function addToProducts(productObject) {
+    const products = getProducts();
+    products.push(productObject);
+    setProduct(products);
 }
 
 export function addToCart(productId) {

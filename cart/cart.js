@@ -12,7 +12,7 @@ import { candies } from '../data.js';
 //will not need this cartArray, and will need to import
 //will need to import getcart from utils...
 //import { cartArray } from './cart-data.js';
-import { getCart } from '../local-storage-utils.js';
+import { clearCart, getCart } from '../local-storage-utils.js';
 import { renderTableRow } from './render-table-row.js';
 import { grandTotal } from './render-table-row.js'; 
 
@@ -24,12 +24,12 @@ const cartArray = getCart();
 
 purchaseButton.addEventListener('click', (event) => {
     alert(JSON.stringify(getCart()));
-    localStorage.removeItem('CART');
-    window.location.replace('../index.html');
+    clearCart();    
+   
 
 
 
-})
+});
 
 for (let cartObject of cartArray) {
     const tr = renderTableRow(cartObject);
