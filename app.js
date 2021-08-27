@@ -6,7 +6,8 @@
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
-import { candies } from './data.js';
+
+import { getProducts } from './local-storage-utils.js';
 import { renderCandy } from './render-utils.js';
 //This is the parent element UL
 const productList = document.getElementById('productList');
@@ -14,6 +15,8 @@ const productList = document.getElementById('productList');
 // const test = renderCandy(candies[0]);
 // //Next we append / insert child element into parernt element:
 // productList.append(test);
+
+const candies = getProducts();
 
 for (let candy of candies) {
     const li = renderCandy(candy);
