@@ -57,7 +57,7 @@ export function setProduct(productsArray) {
     //stringify cart array:
     const stringifiedCart = JSON.stringify(productsArray);
     //Put cart into local storage:
-    localStorage.setItem(CART, stringifiedCart);
+    localStorage.setItem(PRODUCTS, stringifiedCart);
 }
 
 //this function adds 
@@ -67,14 +67,13 @@ export function addToProducts(productObject) {
     setProduct(products);
 }
 
+//
 export function addToCart(productId) {
 //0 grab the cart from localStorage
 //1 Use findyById to see if the item already exists in cart
 //2a if product is in cart, increment the quantity
 //2b else, add it to cart
 //3save the updated cart in localStorage
-
-
 //we already have: localStorage.getItem in getcart function:
     const cart = getCart();
 //use findById to see if item already exists in cart    
@@ -93,6 +92,8 @@ export function addToCart(productId) {
     setCart(cart);
 }
 
+
+//This function is clearing the cart and redirecting the user to home page:
 export function clearCart(){
     // first get cart using getcart function above:
     const cart = getCart();
