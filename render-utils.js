@@ -1,4 +1,4 @@
-import { addToCart } from './local-storage-utils.js'
+import { addToCart } from './local-storage-utils.js';
 
 export function renderCandy(candy) {
     const li = document.createElement('li');
@@ -11,7 +11,7 @@ export function renderCandy(candy) {
 
     addButton.addEventListener('click', (event) => {
         addToCart(candy.id);
-    })
+    });
 
 
     li.classList.add('candy');

@@ -1,7 +1,5 @@
 import { addToProducts } from '../local-storage-utils.js';
 
-
-
 const form = document.getElementById('newInventoryForm');
 
 form.addEventListener('submit', (event) => {
@@ -15,13 +13,14 @@ form.addEventListener('submit', (event) => {
     // console.log(data.get('quantity'));
     // console.log(data.get('weight'));
    
+
     const product = {
-        id: data.get('id'),
-        name: data.get('productName'),
-        image: data.get('image'),
-        price: data.get('price'),
-        quantity: data.get('quantity'),
-        weight: data.get('weight'),
+        id: Number(data.get('id')),
+        name: data.get('name'),
+        image: data.get('img'),
+        price: Number(data.get('price')),
+        quantity: Number(data.get('quantity')),
+        weight: Number(data.get('weight')),
 
     };
     // console.log(product);

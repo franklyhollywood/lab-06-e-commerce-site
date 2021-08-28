@@ -8,7 +8,8 @@
 
 
 
-import { candies } from '../data.js';
+// import { candies } from '../data.js';
+import { getProducts } from '../local-storage-utils.js';
 //will need to import getcart from utils/ won't need fake data from cartArray
 //import { cartArray } from './cart-data.js';
 import { clearCart, getCart } from '../local-storage-utils.js';
@@ -21,7 +22,7 @@ const cartTable = document.getElementById('tableId');
 const grandTotalEl = document.getElementById('grandTotalId');
 //const cartarray - from getcart function from today.
 const cartArray = getCart();
-
+const candies = getProducts();
 //purchase button on cart page displays what's in cart in an alert
 // then clear't the cart and redirects the user based on clearCart function.
 purchaseButton.addEventListener('click', (event) => {
