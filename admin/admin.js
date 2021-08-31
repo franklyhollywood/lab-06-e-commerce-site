@@ -2,10 +2,12 @@ import { addToProducts } from '../local-storage-utils.js';
 
 const form = document.getElementById('newInventoryForm');
 
+//
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const data = new FormData(form);
-
+    alert('Product entered into local Storage!');
+    
     // console.log(data.get('id'));
     // console.log(data.get('productName'));
     // console.log(data.get('image'));
@@ -26,4 +28,5 @@ form.addEventListener('submit', (event) => {
     // console.log(product);
 
     addToProducts(product);
+    window.location.href = '../product/index.html';
 });

@@ -60,7 +60,8 @@ export function setProduct(productsArray) {
     localStorage.setItem(PRODUCTS, stringifiedCart);
 }
 
-//this function adds 
+
+//this function adds products to the cart:
 export function addToProducts(productObject) {
     const products = getProducts();
     //console.log(products, '1');
