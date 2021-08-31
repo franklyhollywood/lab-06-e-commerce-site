@@ -30,7 +30,7 @@ purchaseButton.addEventListener('click', (event) => {
     clearCart();    
    
 });
-
+//loop through all items in teh cart and render the tablerows:
 for (let cartObject of cartArray) {
     const tr = renderTableRow(cartObject);
     cartTable.append(tr);

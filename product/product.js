@@ -24,3 +24,4 @@ for (let candy of candies) {
       //console.log(li);
     productList.append(li);
 }
+
