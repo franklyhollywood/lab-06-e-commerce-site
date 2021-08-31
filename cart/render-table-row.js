@@ -1,5 +1,6 @@
 import { findById } from '../findById.js';
-import { candies } from '../data.js';
+//import { candies } from '../data.js';
+import { getProducts } from '../local-storage-utils.js';
 
 export function renderTableRow(cartCandy) {
     const tr = document.createElement('tr');
@@ -8,14 +9,15 @@ export function renderTableRow(cartCandy) {
     const quantityTd = document.createElement('td');
     const totalTd = document.createElement('td');
 
-    const candy = findById(candies, cartCandy.id);
+    
+    const candy = findById(getProducts(), cartCandy.id);
     
     nameTd.textContent = candy.name;
     priceTd.textContent = candy.price.toFixed(2);
     quantityTd.textContent = cartCandy.quantity;
     totalTd.textContent = calcItemTotal(candy.price, cartCandy.quantity);
 
-    console.log(nameTd, priceTd, quantityTd, totalTd);
+    //console.log(nameTd, priceTd, quantityTd, totalTd);
 
     tr.append(nameTd, priceTd, quantityTd, totalTd);
 

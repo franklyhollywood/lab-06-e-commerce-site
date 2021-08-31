@@ -63,7 +63,9 @@ export function setProduct(productsArray) {
 //this function adds 
 export function addToProducts(productObject) {
     const products = getProducts();
+    //console.log(products, '1');
     products.push(productObject);
+    //console.log(products, '2');
     setProduct(products);
 }
 
