@@ -2,7 +2,7 @@ import { addToCart } from './local-storage-utils.js';
 
 //Here we are creating the HTML elements for the LI:
 export function renderCandy(candy) {
-    console.log(candy);
+    //console.log(candy);
     const li = document.createElement('li');
     const h3 = document.createElement('h3');
     const img = document.createElement('img');

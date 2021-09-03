@@ -26,13 +26,7 @@ export function getCart() {
 
 
 
-// Make cart stringified so that the local storage can use it:
-export function setCart(cartArray) {
-    //stringify cart array:
-    const stringifiedCart = JSON.stringify(cartArray);
-    //Put cart into local storage:
-    localStorage.setItem(CART, stringifiedCart);
-}
+
 
 
 
